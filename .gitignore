@@ -1,0 +1,9 @@
+# Large media files
+*.mov
+*.mp4
+
+# Apple Pages files
+*.pages
+
+# macOS
+.DS_Store
