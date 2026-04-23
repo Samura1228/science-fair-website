@@ -1,6 +1,7 @@
 # Large media files
 *.mov
 *.mp4
+!science_video.mp4
 
 # Apple Pages files
 *.pages
