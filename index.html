@@ -770,11 +770,16 @@
             align-items: center;
             justify-content: flex-end;
             padding-right: 12px;
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .bar-value {
             font-size: 0.85rem;
             font-weight: 700;
             color: #0a1628;
-            width: 0;
-            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            white-space: nowrap;
         }
 
         .bar-fill.hot-water {
@@ -923,14 +928,48 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .bar-chart {
+                padding-right: 65px;
+            }
+
             .bar-item {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: stretch;
+                gap: 0.4rem;
             }
 
             .bar-label {
                 text-align: left;
                 min-width: auto;
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: #c0d0e0;
+                margin-bottom: 0.1rem;
+            }
+
+            .bar-track {
+                height: 42px;
+                overflow: visible;
+                width: 100%;
+            }
+
+            .bar-fill {
+                overflow: visible;
+            }
+
+            .bar-value {
+                position: absolute;
+                left: calc(100% + 10px);
+                top: 50%;
+                transform: translateY(-50%);
+                color: #00f5d4;
+                font-size: 0.9rem;
+                font-weight: 700;
+                text-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+            }
+
+            .chart-container {
+                max-width: 100%;
             }
 
             section {
@@ -964,6 +1003,28 @@
         @media (max-width: 480px) {
             .materials-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .bar-chart {
+                padding-right: 58px;
+                gap: 1.4rem;
+            }
+
+            .bar-track {
+                height: 38px;
+            }
+
+            .bar-value {
+                font-size: 0.85rem;
+                left: calc(100% + 8px);
+            }
+
+            .bar-label {
+                font-size: 0.9rem;
+            }
+
+            .glass-card {
+                padding: 1.2rem;
             }
         }
 
@@ -1267,25 +1328,25 @@
                     <div class="bar-item">
                         <span class="bar-label">Hot Water</span>
                         <div class="bar-track">
-                            <div class="bar-fill hot-water" style="--target-width: 92%;">110 dB</div>
+                            <div class="bar-fill hot-water" style="--target-width: 92%;"><span class="bar-value">110 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
                         <span class="bar-label">Cold Water</span>
                         <div class="bar-track">
-                            <div class="bar-fill cold-water" style="--target-width: 83%;">99 dB</div>
+                            <div class="bar-fill cold-water" style="--target-width: 83%;"><span class="bar-value">99 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
                         <span class="bar-label">Styrofoam Barrier</span>
                         <div class="bar-track">
-                            <div class="bar-fill styrofoam" style="--target-width: 71%;">85 dB</div>
+                            <div class="bar-fill styrofoam" style="--target-width: 71%;"><span class="bar-value">85 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
                         <span class="bar-label">Glass Barrier</span>
                         <div class="bar-track">
-                            <div class="bar-fill glass" style="--target-width: 63%;">75 dB</div>
+                            <div class="bar-fill glass" style="--target-width: 63%;"><span class="bar-value">75 dB</span></div>
                         </div>
                     </div>
                 </div>
