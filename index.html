@@ -747,7 +747,7 @@
         }
 
         .bar-label {
-            min-width: 140px;
+            min-width: 200px;
             text-align: right;
             color: #a0b4c8;
             font-size: 0.9rem;
@@ -782,20 +782,20 @@
             white-space: nowrap;
         }
 
-        .bar-fill.hot-water {
+        .bar-fill.hot-no-obstacle {
             background: linear-gradient(90deg, #00f5d4, #48cae4);
         }
 
-        .bar-fill.cold-water {
+        .bar-fill.hot-with-obstacle {
+            background: linear-gradient(90deg, #f77f00, #fcbf49);
+        }
+
+        .bar-fill.cold-no-obstacle {
             background: linear-gradient(90deg, #0077b6, #48cae4);
         }
 
-        .bar-fill.styrofoam {
-            background: linear-gradient(90deg, #0077b6, #00b4d8);
-        }
-
-        .bar-fill.glass {
-            background: linear-gradient(90deg, #1a3a5c, #0077b6);
+        .bar-fill.cold-with-obstacle {
+            background: linear-gradient(90deg, #9b5de5, #f15bb5);
         }
 
         .bar-fill.animated {
@@ -1324,33 +1324,33 @@
         <div class="section-container">
             <h2 class="section-title reveal">What We <span class="accent">Discovered</span></h2>
             <div class="results-content reveal delay-1">
-                <p>Our results revealed fascinating patterns in underwater sound propagation. The average sound intensity measured approximately 110 decibels in hot water conditions. The results with obstacles surprised us significantly — showing notably lower values than expected. Our analysis focused on how sound propagates through different conditions, including the effects of styrofoam and glass barriers. According to our findings, obstacles don't impair whale communication severely enough to be considered significant.</p>
+                <p>Our results revealed fascinating patterns in underwater sound propagation. Sound intensity measured approximately 110 dB without obstacles and ~115 dB with obstacles, regardless of whether the water was hot (60°) or cold (10°). Interestingly, the presence of an obstacle slightly increased the measured sound intensity, possibly due to reflections concentrating the sound. Water temperature did not significantly affect the results. These findings suggest that neither temperature variation nor physical barriers drastically impair underwater sound transmission — supporting the idea that whales can communicate effectively across diverse ocean conditions.</p>
             </div>
             <div class="glass-card reveal delay-2">
                 <p class="chart-title">Sound Intensity by Condition (dB)</p>
                 <div class="bar-chart" id="barChart">
                     <div class="bar-item">
-                        <span class="bar-label">Hot Water</span>
+                        <span class="bar-label">Hot Water (60°), No Obstacle</span>
                         <div class="bar-track">
-                            <div class="bar-fill hot-water" style="--target-width: 92%;"><span class="bar-value">110 dB</span></div>
+                            <div class="bar-fill hot-no-obstacle" style="--target-width: 92%;"><span class="bar-value">~110 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
-                        <span class="bar-label">Cold Water</span>
+                        <span class="bar-label">Hot Water (60°), With Obstacle</span>
                         <div class="bar-track">
-                            <div class="bar-fill cold-water" style="--target-width: 83%;"><span class="bar-value">99 dB</span></div>
+                            <div class="bar-fill hot-with-obstacle" style="--target-width: 96%;"><span class="bar-value">~115 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
-                        <span class="bar-label">Styrofoam Barrier</span>
+                        <span class="bar-label">Cold Water (10°), No Obstacle</span>
                         <div class="bar-track">
-                            <div class="bar-fill styrofoam" style="--target-width: 71%;"><span class="bar-value">85 dB</span></div>
+                            <div class="bar-fill cold-no-obstacle" style="--target-width: 92%;"><span class="bar-value">~110 dB</span></div>
                         </div>
                     </div>
                     <div class="bar-item">
-                        <span class="bar-label">Glass Barrier</span>
+                        <span class="bar-label">Cold Water (10°), With Obstacle</span>
                         <div class="bar-track">
-                            <div class="bar-fill glass" style="--target-width: 63%;"><span class="bar-value">75 dB</span></div>
+                            <div class="bar-fill cold-with-obstacle" style="--target-width: 96%;"><span class="bar-value">~115 dB</span></div>
                         </div>
                     </div>
                 </div>
@@ -1370,7 +1370,7 @@
         <div class="section-container">
             <h2 class="section-title reveal"><span class="accent">Conclusion</span></h2>
             <div class="glass-card conclusion-content reveal delay-1" style="margin-top: 2rem;">
-                <p>Sound propagation underwater is affected by various conditions, either amplifying or diminishing its intensity. By testing different scenarios, we found that while conditions do alter sound behavior, they generally don't create insurmountable barriers. Even when the sound's path is blocked by obstacles, it can still be transmitted effectively. This helps explain how whales can communicate across vast ocean distances despite varying underwater conditions.</p>
+                <p>Our experiment demonstrated that underwater sound propagation remains remarkably consistent across different conditions. Water temperature (60° vs 10°) had no significant effect on sound intensity, and the presence of obstacles actually resulted in a slight increase in measured loudness (~115 dB vs ~110 dB), likely due to sound reflections. These findings confirm that neither temperature changes nor physical barriers create insurmountable obstacles for underwater sound — helping explain how whales can communicate effectively across vast ocean distances despite varying conditions.</p>
             </div>
         </div>
     </section>
