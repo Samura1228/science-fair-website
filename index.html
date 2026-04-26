@@ -929,7 +929,7 @@
             }
 
             .bar-chart {
-                padding-right: 65px;
+                padding-right: 60px;
             }
 
             .bar-item {
@@ -951,21 +951,25 @@
                 height: 42px;
                 overflow: visible;
                 width: 100%;
+                position: relative;
             }
 
             .bar-fill {
                 overflow: visible;
+                position: static;
             }
 
             .bar-value {
                 position: absolute;
-                left: calc(100% + 10px);
+                right: -58px;
+                left: auto;
                 top: 50%;
                 transform: translateY(-50%);
                 color: #00f5d4;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 font-weight: 700;
                 text-shadow: 0 0 10px rgba(0, 245, 212, 0.3);
+                white-space: nowrap;
             }
 
             .chart-container {
@@ -1006,7 +1010,7 @@
             }
 
             .bar-chart {
-                padding-right: 58px;
+                padding-right: 55px;
                 gap: 1.4rem;
             }
 
@@ -1015,8 +1019,8 @@
             }
 
             .bar-value {
-                font-size: 0.85rem;
-                left: calc(100% + 8px);
+                font-size: 0.8rem;
+                right: -52px;
             }
 
             .bar-label {
